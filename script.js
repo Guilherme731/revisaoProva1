@@ -54,7 +54,7 @@ function ex3(){
 function ex4(){
     let numeros = [];
     for(let i = 0; i < 4; i++){
-        numeros[i] = parseInt(prompt('Digite um número'));
+        numeros[i] = parseFloat(prompt('Digite um número'));
     }
     numeros.sort();
     for(let i = 3; i >= 0; i--){
@@ -72,5 +72,35 @@ function ex5(){
         console.log('O número ' + numero +' é ímpar');
         numero++;
         console.log('Agora o número é ' + numero + ', que é par');
+    }
+}
+
+function ex6(){
+    let vogais = ['a', 'e', 'i', 'o', 'u'];
+    let letra = prompt('Digite uma letra').toLowerCase();
+    let possuiVogal = false;
+
+    switch(letra){
+        case vogais[0]:
+            possuiVogal = true;
+            break;
+        case vogais[1]:
+            possuiVogal = true;
+            break;
+        case vogais[2]:
+            possuiVogal = true;
+            break;
+        case vogais[3]:
+            possuiVogal = true;
+            break;
+        case vogais[4]:
+            possuiVogal = true;
+            break;
+    }
+
+    if(possuiVogal){
+        console.log('É uma vogal');
+    }else{
+        console.log('É uma consoante');
     }
 }
