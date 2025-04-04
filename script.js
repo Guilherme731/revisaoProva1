@@ -117,3 +117,22 @@ function ex7(){
 
     console.log('O preço do sabor ' + saboresPrecos[sabor][0] + ' é R$' + saboresPrecos[sabor][1]);
 }
+
+function ex8(){
+    let numeroObjetivo = Math.random();
+    numeroObjetivo = Math.floor(numeroObjetivo * (100 - 1) + 1);
+
+    let palpite = parseInt(prompt('Faça uma tentativa'));
+
+    while(palpite != numeroObjetivo){
+
+        if(palpite > numeroObjetivo){
+            console.log('O número certo é MENOR');
+        }else{
+            console.log('O número certo é MAIOR');
+        }
+
+        palpite = parseInt(prompt('Faça uma tentativa'));
+    }
+    console.log('Parabéns! o número é ', numeroObjetivo);
+}
