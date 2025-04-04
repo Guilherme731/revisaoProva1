@@ -50,3 +50,14 @@ function ex3(){
         console.log('A empresa não teve lucro nem prejuízo no ano!');
     }
 }
+
+function ex4(){
+    let numeros = [];
+    for(let i = 0; i < 4; i++){
+        numeros[i] = parseInt(prompt('Digite um número'));
+    }
+    numeros.sort();
+    for(let i = 3; i >= 0; i--){
+        console.log(numeros[i]);
+    }
+}
