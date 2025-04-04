@@ -104,3 +104,16 @@ function ex6(){
         console.log('É uma consoante');
     }
 }
+
+function ex7(){
+    let saboresPrecos = [['Chocolate', 1.5], ['Morango', 2.5], ['Creme', 2.5],['Manga', 3.2],['Melancia', 3.4],['Vanilla Ice', 3],['Céu Azul', 3.6],['Brownie', 4],['Hawaiano', 5]];
+
+    console.log('Lista de sabores');
+    for(let i = 0; i < saboresPrecos.length; i++){
+        console.log((i + 1) + ': ' +saboresPrecos[i][0]);
+    }
+
+    let sabor = parseInt(prompt('Digite o número do sabor desejado (veja a lista no console)')) - 1;
+
+    console.log('O preço do sabor ' + saboresPrecos[sabor][0] + ' é R$' + saboresPrecos[sabor][1]);
+}
