@@ -61,3 +61,16 @@ function ex4(){
         console.log(numeros[i]);
     }
 }
+
+function ex5(){
+    let numero = parseInt(prompt('Digite um número'));
+    if(numero % 2 == 0){
+        console.log('O número ' + numero +' é par');
+        numero++;
+        console.log('Agora o número é ' + numero + ', que é ímpar');
+    }else{
+        console.log('O número ' + numero +' é ímpar');
+        numero++;
+        console.log('Agora o número é ' + numero + ', que é par');
+    }
+}
