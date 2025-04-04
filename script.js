@@ -10,5 +10,17 @@ function ex1(){
 }
 
 function ex2(){
-    
+    let numero = 10;
+    let intervalContagem;
+
+    intervalContagem = setInterval(contagemRegressiva, 1000);
+
+    function contagemRegressiva(){
+        console.log(numero);
+        numero--;
+        if(numero < 0){
+            console.log('Lançamento!');
+            clearInterval(intervalContagem);
+        }
+    }
 }
