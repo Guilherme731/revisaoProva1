@@ -136,3 +136,41 @@ function ex8(){
     }
     console.log('Parabéns! o número é ', numeroObjetivo);
 }
+
+function ex9(){
+    let frase = prompt('Digite uma frase');
+    let qtdVogais = 0;
+    
+    for(let i = 0; i < frase.length; i++){
+        if(eVogal(frase[i])){
+            qtdVogais++;
+        }
+    }
+
+    console.log('A quantidade de vogais é ' + qtdVogais);
+
+    function eVogal(letra) {
+        let vogais = ['a', 'e', 'i', 'o', 'u'];
+        let possuiVogal = false;
+
+        switch (letra) {
+            case vogais[0]:
+                possuiVogal = true;
+                break;
+            case vogais[1]:
+                possuiVogal = true;
+                break;
+            case vogais[2]:
+                possuiVogal = true;
+                break;
+            case vogais[3]:
+                possuiVogal = true;
+                break;
+            case vogais[4]:
+                possuiVogal = true;
+                break;
+        }
+
+        return possuiVogal;
+    }
+}
