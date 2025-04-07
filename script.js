@@ -219,3 +219,23 @@ function ex11(){
         console.log(numero + ' X ' + i + ' = ' + (numero * i));
     }
 }
+
+function ex12(){
+    let carrinho = [];
+    let total = 0;
+
+    for(let i = 0; i < 5; i++){
+        let nomeProduto = prompt('Nome do produto:');
+        let precoProduto = parseFloat(prompt('Preço do produto:'));
+    
+        carrinho.push({nome: nomeProduto, preco: precoProduto})
+    }
+
+    for(let i = 0; i < carrinho.length; i++){
+        console.log('Nome: ' + carrinho[i].nome);
+        console.log('Preço: R$' + carrinho[i].preco);
+        console.log('---');
+        total += carrinho[i].preco;
+    }
+    console.log('O total deste carrinho é R$' + total);
+}
