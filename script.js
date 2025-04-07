@@ -174,3 +174,41 @@ function ex9(){
         return possuiVogal;
     }
 }
+
+function ex10(){
+    validarSenha(prompt('Digite uma senha!'))
+
+    function validarSenha(senha){
+
+        if(senha.length >= 8 && temRequisitos(senha)){
+            console.log('A senha É válida');
+        }else{
+            console.log('A senha NÃO é válida');
+        }
+    }
+
+    function temRequisitos(texto){
+        let temMaiuscula = false;
+        let temMinuscula = false;
+        let temNumero = false;
+
+        for (let i = 0; i < texto.length; i++) {
+            caractere = texto[i];
+            if (caractere == parseInt(caractere)) {
+                temNumero = true;
+            } else {
+                if (caractere === caractere.toUpperCase()) {
+                    temMaiuscula = true;
+                }
+                if (caractere === caractere.toLowerCase()) {
+                    temMinuscula = true;
+                }
+            }
+        };
+        if(temMaiuscula && temMinuscula && temNumero){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
